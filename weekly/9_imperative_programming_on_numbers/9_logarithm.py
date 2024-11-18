@@ -9,15 +9,12 @@ unspecified, m should be 2.
 def logarithm(n: int, m: int) -> int:
     """
     Returns the integer base-m logarithm of n.
-    >>> logarithm(2, 64)
+    >>> logarithm(64, 2)
     6
     """
 
     i = 0
-    while m != 1:
-        m = m//n
+    while n != 1:
+        n = n//m
         i = i + 1
     return i
-
-print(logarithm(2, 64))
-
